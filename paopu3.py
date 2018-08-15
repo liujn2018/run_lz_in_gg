@@ -35,7 +35,7 @@ with open('wtlist/current.txt', 'rt') as wt_in:
             #print(match.group(1))
             filename = match.group(1)
             if filename.endswith('.gz'):
-                __shell__('gunzip {0}'.format(filename))
+                __shell__('gunzip -f {0}'.format(filename))
                 filename = filename[:-3]
             else:
                 pass
