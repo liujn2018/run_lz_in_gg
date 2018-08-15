@@ -16,8 +16,8 @@ if not os.path.exists('/usr/lib/x86_64-linux-gnu/libnvidia-opencl.so.1'):
     __shell__('apt --fix-broken install > /dev/null')
 
 __shell__('pip install gdown >/dev/null')
-__shell__('gdown wn https://drive.google.com/uc?id=12nkQsoyKJ4OP8p4foJ05jTxXATfGnJ1M')
-__shell__('gdown wn https://drive.google.com/uc?id=1srbuq-CqAGOqU8FxgIfCpr7o1fsSQR5C')
+__shell__('gdown https://drive.google.com/uc?id=12nkQsoyKJ4OP8p4foJ05jTxXATfGnJ1M')
+__shell__('gdown https://drive.google.com/uc?id=1srbuq-CqAGOqU8FxgIfCpr7o1fsSQR5C')
 __shell__('mkdir -p run_lz_in_gg/networks; ls | head -2| xargs -i cp -r {} run_lz_in_gg/networks')
 
 __shell__('cd run_lz_in_gg; ./autogtp | grep minute')
