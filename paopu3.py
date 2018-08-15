@@ -26,6 +26,8 @@ __shell__('git clone https://github.com/liujn2018/wtlist.git')
 __shell__('pip install gdown >/dev/null')
 with open('wtlist/current.txt', 'rt') as wt_in:
     for line in wt_in.readlines():
+        if len(line)<5:
+            continue
         dlinfo = __shell2__('gdown --id {0}'.format(line))
         print(dlinfo)
         match = re.search(r'To: /content/(.*?)$', dlinfo, re.MULTILINE)
