@@ -44,5 +44,5 @@ with open('wtlist/current.txt', 'rt') as wt_in:
             __shell__('mv /content/{0} run_lz_in_gg/networks/'.format(filename))
         
 
-__shell__('cd run_lz_in_gg; mv leelaz_new leelaz; chmod +x leelaz;./autogtp -k sgf')
+__shell__('cd run_lz_in_gg; chmod +x leelaz;./autogtp -k sgf')
 
